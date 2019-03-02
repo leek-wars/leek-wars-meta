@@ -1,0 +1,4 @@
+import sys
+sys.path.append('/home/pierre/dev/gimp')
+import leekwars_chips
+reload(leekwars_chips) and leekwars_chips.execute()
