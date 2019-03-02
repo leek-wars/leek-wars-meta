@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   inkscape:export-filename="/home/pierre/sites/Leek Wars/site/image/logout.png"
+   inkscape:export-xdpi="6.6549888"
+   inkscape:export-ydpi="6.6549888"
+   sodipodi:docname="logout.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="608.62119"
+     inkscape:cy="579.99041"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3761"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2995"
+       transform="translate(49.285714,-51.428571)"
+       style="fill:#8c8c8c;fill-opacity:1"
+       inkscape:export-xdpi="6.6620798"
+       inkscape:export-ydpi="6.6620798">
+      <g
+         id="g3761"
+         style="fill:#8c8c8c;fill-opacity:1"
+         transform="matrix(2.2373873,0,0,2.2373873,-461.6298,-548.64149)">
+        <g
+           id="g3773">
+          <path
+             id="path2985"
+             d="m 315,356.5 c -65.95955,15.76681 -115,75.08455 -115,145.875 0,82.84271 67.15729,150 150,150 82.84271,0 150,-67.15729 150,-150 C 500,431.58455 450.95955,372.26681 385,356.5 l 0,41.5625 c 43.5925,14.61981 75,55.79698 75,104.3125 0,60.75132 -49.24868,110 -110,110 -60.75132,0 -110,-49.24868 -110,-110 0,-48.51552 31.4075,-89.69269 75,-104.3125 L 315,356.5 z"
+             style="fill:#8c8c8c;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:connector-curvature="0" />
+          <rect
+             ry="0"
+             y="355.24109"
+             x="330"
+             height="167.54767"
+             width="40"
+             id="rect2990"
+             style="fill:#8c8c8c;fill-opacity:1;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
