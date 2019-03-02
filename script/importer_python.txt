@@ -1,0 +1,7 @@
+import sys
+sys.path.append('/home/pierre/dev/leek-wars/meta/script')
+import leekwars_chips
+
+
+
+>>> Enlever le register() et le main() à la fin du script
