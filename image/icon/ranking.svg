@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg3083"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="ranking.svg"
+   inkscape:export-filename="/home/pierre/sites/Leek Wars/site/image/ranking.png"
+   inkscape:export-xdpi="8.0345173"
+   inkscape:export-ydpi="8.0345173">
+  <defs
+     id="defs3085" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.6"
+     inkscape:cx="465.88297"
+     inkscape:cy="316.82008"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3088">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#000000"
+       d="m 282.12713,581.61152 c -24.51604,-2.45531 -47.91365,-11.53531 -51.99462,-20.17773 -7.5676,-16.02618 43.62284,-58.44315 71.33337,-59.10753 29.18279,-0.69986 47.98197,-31.78524 39.09913,-64.65191 C 335.75944,419.89413 300.90035,374.10282 263.10043,335.91578 182.10171,254.0876 109.51481,134.12807 96.827133,61.126754 l -9.04193,-52.0239977 48.701577,0 c 34.30514,0 48.70142,4.8562917 48.70142,16.4286457 0,13.820871 29.9499,16.428645 188.68478,16.428645 158.73485,0 188.68475,-2.607774 188.68475,-16.428645 0,-11.878126 15.00358,-16.4286457 54.16669,-16.4286457 52.12957,0 53.85282,1.1328007 45.81966,30.1191487 C 625.38951,173.28913 597.0457,222.14724 489.50439,337.50201 394.27777,439.64728 388.78542,478.10595 464.84601,510.16337 c 127.18402,53.60459 27.6671,92.51844 -182.71888,71.44815 z M 233.65999,184.34156 C 205.4214,94.475486 167.98055,31.007606 143.20573,31.007606 c -33.07311,0 10.04703,125.419514 69.15565,201.146424 22.87695,29.30871 43.60972,51.48736 46.07316,49.2859 2.46327,-2.20149 -8.6853,-45.8958 -24.77455,-97.09837 z m 348.75686,-4.47614 c 35.65278,-59.83454 58.83812,-148.857814 38.76862,-148.857814 -28.27859,0 -58.78942,48.44971 -89.2789,141.769594 -29.76865,91.114 -30.40681,97.92391 -7.60573,81.15508 13.68935,-10.06757 39.84163,-43.39771 58.11601,-74.06686 z"
+       id="path3156"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
