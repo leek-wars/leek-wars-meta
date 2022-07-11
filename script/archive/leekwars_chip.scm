@@ -52,7 +52,7 @@
 	"script-fu-leekwars_chip"
 	_"<Image>/Filters/Artistic/Leekwars Chip"
 	"Leekwars Chip"
-	"Pilow <pierre.laupretre@gmail.com>"
+	"Pilow <>"
 	"Pilow"
 	"2013/01/12"
 	"RGBA GRAYA"
