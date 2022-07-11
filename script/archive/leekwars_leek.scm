@@ -88,7 +88,7 @@
 	"script-fu-leekwars_leek"
 	_"<Image>/Filters/Artistic/Leekwars Leeks"
 	"Leekwars Leeks"
-	"Pilow <pierre.laupretre@gmail.com>"
+	"Pilow <>"
 	"Pilow"
 	"2013/01/12"
 	"RGBA GRAYA"
