@@ -25,7 +25,7 @@
 	"script-fu-leekwars_weapon"
 	_"<Image>/Filters/Artistic/Leekwars Weapon"
 	"Leekwars Weapon"
-	"Pilow <pierre.laupretre@gmail.com>"
+	"Pilow <>"
 	"Pilow"
 	"2013/01/12"
 	"RGBA GRAYA"
