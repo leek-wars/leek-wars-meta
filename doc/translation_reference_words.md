@@ -1,6 +1,6 @@
 # Mots de référence
 
-poireau, éleveur, arme, puce, équipe, potager, marché, caractéristique, combat, apparat, tchat, tour
+poireau, éleveur, arme, puce, équipe, potager, marché, caractéristique, combat, apparat, tchat, tour, cellule
 
 Français | Anglais | Italien
 ---------|----------|-------
