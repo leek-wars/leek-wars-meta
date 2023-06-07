@@ -14,7 +14,7 @@ Marché | Market |
 Caractéristique | Characteristic |
 Combat | Fight |
 Apparat | Pomp |
-Tchat | Chat | Chat ~gatto~
+Tchat | Chat | Chat ~Gatto~
 Tour | Turn | Turno/Turni ~Giro~
 Cellule | Cell | Cella
 
