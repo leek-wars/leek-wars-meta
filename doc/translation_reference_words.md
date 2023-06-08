@@ -15,7 +15,7 @@ Caractéristique | Characteristic | Charatteristica/Charatteristiche
 Combat | Fight | Combattimento
 Apparat | Pomp | Tenuta
 Tchat | Chat | Chat ~Gatto~
-Tour | Turn | Turno/Turni ~Giro~
+Tour | Turn | Turno/Turni ~Giro~ ~Torre~
 Cellule | Cell | Cella/Celle
 
 ## Fichiers
