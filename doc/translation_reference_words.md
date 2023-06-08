@@ -8,6 +8,7 @@ Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
 Puce | Chip | Chip
+Bulbe | Bulb | Bulbo ~Lampa~
 Équipe | Team | Squadra ~Equipaggio~
 Potager | ~Vegetable~ Garden | Orto
 Marché | Market | Mercato
