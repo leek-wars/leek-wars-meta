@@ -17,6 +17,7 @@ Apparat | Pomp | Tenuta
 Tchat | Chat | Chat ~Gatto~
 Tour | Turn | Turno/Turni ~Giro~ ~Torre~
 Cellule | Cell | Cella/Celle
+Battle Royale | Battle Royale | Battle Royale
 
 ## Fichiers
 
