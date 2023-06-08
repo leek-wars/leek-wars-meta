@@ -16,7 +16,7 @@ Combat | Fight | Combattimento
 Apparat | Pomp | Tenuta
 Tchat | Chat | Chat ~Gatto~
 Tour | Turn | Turno/Turni ~Giro~
-Cellule | Cell | Cella
+Cellule | Cell | Cella/Celle
 
 ## Fichiers
 
