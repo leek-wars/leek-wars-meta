@@ -5,15 +5,15 @@ poireau, éleveur, arme, puce, équipe, potager, marché, caractéristique, comb
 Français | Anglais | Italien
 ---------|----------|-------
 Poireau | Leek | Porro
-Éleveur | Farmer ~Breeder~ |
+Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
 Puce | Chip | Chip
 Équipe | Team | Squadra ~Equipaggio~
-Potager | ~Vegetable~ Garden |
-Marché | Market |
-Caractéristique | Characteristic |
-Combat | Fight |
-Apparat | Pomp |
+Potager | ~Vegetable~ Garden | Orto
+Marché | Market | Mercato
+Caractéristique | Characteristic | Charatteristica/Charatteristiche
+Combat | Fight | Combattimento
+Apparat | Pomp | Tenuta
 Tchat | Chat | Chat ~Gatto~
 Tour | Turn | Turno/Turni ~Giro~
 Cellule | Cell | Cella
