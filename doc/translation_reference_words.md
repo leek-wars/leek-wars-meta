@@ -8,14 +8,14 @@ Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
 Puce | Chip | Chip
-Bulbe | Bulb | Bulbo ~Lampa~
+Bulbe | Bulb | Bulbo/Bulbi ~Lampa~
 Équipe | Team | Squadra ~Equipaggio~
 Potager | ~Vegetable~ Garden | Orto
 Marché | Market | Mercato
 Caractéristique | Characteristic | Charatteristica/Charatteristiche
 Combat | Fight | Combattimento
 Apparat | Pomp | Tenuta
-Tchat | Chat | Chat ~Gatto~
+Chat | Chat | Chat/Chats ~Gatto~ ~Gatti~
 Tour | Turn | Turno/Turni ~Giro~ ~Torre~
 Cellule | Cell | Cella/Celle
 Battle Royale | Battle Royale | Battle Royale
