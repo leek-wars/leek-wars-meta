@@ -4,17 +4,18 @@ poireau, éleveur, arme, puce, équipe, potager, marché, caractéristique, comb
 
 Français | Anglais | Italien
 ---------|----------|-------
+Item : texte | Item: text | Item: text
 Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
-Puce | Chip | Chip
-Bulbe | Bulb | Bulbo/Bulbi ~Lampa~
+Puce | Chip | Chip ~Patatine~ ~Pulci~
+Bulbe | Bulb | Bulbo/Bulbi ~Lampa~ ~Lampes~
 Équipe | Team | Squadra ~Equipaggio~
 Potager | ~Vegetable~ Garden | Orto
 Marché | Market | Mercato
 Caractéristique | Characteristic | Charatteristica/Charatteristiche
 Combat | Fight | Combattimento
-Apparat | Pomp | Tenuta
+Apparat | Pomp | Tenuta ~Apparecchio~
 Chat | Chat | Chat/Chats ~Gatto~ ~Gatti~
 Tour | Turn | Turno/Turni ~Giro~ ~Torre~
 Cellule | Cell | Cella/Celle
