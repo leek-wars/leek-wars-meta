@@ -8,18 +8,22 @@ Item : texte | Item: text | Item: text
 Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
-Puce | Chip | Chip ~Patatine~ ~Pulci~
-Bulbe | Bulb | Bulbo/Bulbi ~Lampa~ ~Lampes~
-Équipe | Team | Squadra ~Equipaggio~
+Puce | Chip | Chip ~Patatine~ ~Patatina~ ~Pulci~
+Bulbe | Bulb | Bulbo/Bulbi ~Lampa~ ~Lampes~ ~Lampadina~ ~Lampadine~
+Équipe | Team | Squadra ~Equipaggio~ ~Team~
 Potager | ~Vegetable~ Garden | Orto
 Marché | Market | Mercato
 Caractéristique | Characteristic | Charatteristica/Charatteristiche
-Combat | Fight | Combattimento
+Combat | Fight | Combattimento ~Lotta~
 Apparat | Pomp | Tenuta ~Apparecchio~
 Chat | Chat | Chat/Chats ~Gatto~ ~Gatti~
 Tour | Turn | Turno/Turni ~Giro~ ~Torre~
 Cellule | Cell | Cella/Celle
 Battle Royale | Battle Royale | Battle Royale
+Acheter | Buy | Comprare ~Comperare~
+Composition | Composition | Composizione ~Costruzione~
+Lot | Lot | Lotto ~Partita~
+Hab | Hab | Hab ~Abitanti~
 
 ## Fichiers
 
