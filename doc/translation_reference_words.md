@@ -2,9 +2,11 @@
 
 poireau, éleveur, arme, puce, équipe, potager, marché, caractéristique, combat, apparat, tchat, tour, cellule
 
-Français | Anglais | Italien
----------|----------|-------
+Français | Anglais | Italien | Espagnol
+---------|---------|---------|---------
 Item : texte | Item: text | Item: text
+Leek Wars | Leek Wars | Leek Wars ~Guerra dei porri~ | Leek Wars
+LeekScript | LeekScript | LeekScript | LeekScript ~PuerroGuión~
 Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
