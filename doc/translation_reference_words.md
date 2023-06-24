@@ -11,7 +11,7 @@ Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
 Puce | Chip | Chip ~Patatine~ ~Patatina~ ~Pulci~
-Bulbe | Bulb | Bulbo/Bulbi ~Lampa~ ~Lampes~ ~Lampadina~ ~Lampadine~
+Bulbe | Bulb | Bulbo/Bulbi ~Lamp[a/es]~ ~Lampadin[a/e]~
 Équipe | Team | Squadra ~Equipaggio~ ~Team~
 Potager | ~Vegetable~ Garden | Orto
 Marché | Market | Mercato
