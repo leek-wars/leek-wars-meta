@@ -6,7 +6,7 @@ Français | Anglais | Italien | Espagnol
 ---------|---------|---------|---------
 Item : texte | Item: text | Item: text
 Leek Wars | Leek Wars | Leek Wars ~Guerra dei porri~ | Leek Wars
-LeekScript | LeekScript | LeekScript | LeekScript ~PuerroGuión~
+LeekScript | LeekScript | LeekScript ~Script del porro~ | LeekScript ~PuerroGuión~
 Poireau | Leek | Porro
 Éleveur | Farmer ~Breeder~ | Allevatore
 Arme | Weapon | Arma
