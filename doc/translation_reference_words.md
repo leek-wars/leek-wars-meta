@@ -26,6 +26,7 @@ Acheter | Buy | Comprare ~Comperare~
 Composition | Composition | Composizione ~Costruzione~
 Lot | Lot | Lotto ~Partita~
 Hab | Hab | Hab ~Abitanti~
+Force | Strength ~Force~ | Forza | 
 
 ## Fichiers
 
