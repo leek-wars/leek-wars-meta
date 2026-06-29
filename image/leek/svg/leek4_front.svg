@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 133 159"
+   sodipodi:docname="leek4_front.svg"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   id="svg40"
+   width="133"
+   height="159"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview689"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="3.6148543"
+     inkscape:cx="54.773992"
+     inkscape:cy="53.252492"
+     inkscape:window-width="2486"
+     inkscape:window-height="1376"
+     inkscape:window-x="2634"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg40">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4908"
+       spacingx="66"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs651">
+    <filter
+       id="s"
+       x="-0.083384774"
+       y="-0.059169961"
+       width="1.161355"
+       height="1.117272"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         result="result6"
+         stdDeviation="3.4"
+         id="feGaussianBlur644" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result6"
+         operator="atop"
+         result="result8"
+         id="feComposite646" />
+      <feComposite
+         in="result8"
+         in2="SourceAlpha"
+         operator="atop"
+         result="result9"
+         id="feComposite648" />
+    </filter>
+  </defs>
+  <path
+     d="M 52.004444,5.9609574 52.1442,1.2400544 72.424529,6.4493572 C 65.975697,28.329519 75.386649,45.223703 86.466556,61.590896 L 73.27121,64.211378 49.367225,23.906851 Z"
+     fill="#007300"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.74464"
+     id="leaf8" />
+  <path
+     d="M 92.707181,20.305636 93.145353,14.186108 71.397878,10.008742 C 77.320447,36.106444 63.898844,42.67971 50.702683,51.404286 l 11.213469,8.193241 29.484704,-23.011353 z"
+     fill="#008200"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.59693"
+     id="leaf7" />
+  <path
+     d="M 39.578975,9.8720708 40.389393,5.7470902 59.496144,8.4474498 C 55.256221,31.341429 65.986699,47.663323 78.292459,63.293588 L 65.69525,67.204857 38.68287,28.402936 Z"
+     fill="#009100"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.74464"
+     id="leaf6" />
+  <path
+     d="m 108.31125,33.078782 1.66814,-5.771746 -21.414752,-6.947833 C 85.983239,40.437812 71.727505,49.46133 55.257769,55.543051 l 11.0467,9.387454 L 103.7683,48.05916 Z"
+     fill="#00a000"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.65722"
+     id="leaf5" />
+  <path
+     d="m 25.749963,16.898678 0.329219,-4.222659 21.577405,2.001754 c -1.53906,23.426488 12.626098,39.595566 28.443996,54.999748 L 62.661663,74.140833 27.318441,35.764291 Z"
+     fill="#00af00"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.85411"
+     id="leaf4" />
+  <path
+     d="m 117.92963,44.343409 1.05106,-3.944197 -18.58041,-9.958165 C 94.331602,52.167599 77.474259,58.87478 59.48168,64.001367 L 69.262677,75.295143 110.70844,60.31043 Z"
+     fill="#00be00"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.77125"
+     id="leaf3" />
+  <path
+     d="M 58.113993,86.672417 C 56.930025,75.583061 26.782807,52.426372 14.843629,21.050048 l 23.114673,2.419611 c 5.487046,26.674326 22.726251,42.17146 40.491352,59.450456 z"
+     fill="#00cd00"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.90855"
+     id="leaf2" />
+  <path
+     d="m 55.306907,86.87723 c 0,0 -2.03e-4,-1.775164 -0.232246,-9.493402 -0.231839,-7.718242 22.060356,-8.399633 32.028413,-14.198949 8.779568,-5.107681 24.010856,-18.13881 24.261436,-18.020648 0.25058,0.117872 15.80181,6.230993 18.43923,7.289319 2.63722,1.058166 -19.99634,17.092695 -28.74037,22.088516 -8.744081,4.995824 -23.203459,7.626865 -24.595838,11.967683 -1.392338,4.341215 -1.771429,5.522428 -1.688146,9.139711 0.08353,3.617485 -3.859162,5.28847 -3.859162,5.28847 l -14.058529,1.62002 z"
+     fill="#00dc00"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.64141"
+     id="leaf1" />
+  <path
+     d="m 68.599267,157.98618 c 24.972319,-0.80699 7.261287,-16.40145 6.694891,-34.10661 C 74.86768,110.56131 75.94294,88.009206 75.94294,88.009206 l -3.001031,3.408458 -2.287261,-4.183275 -2.967987,7.840732 -4.327892,-8.886847 -1.043642,5.093111 -1.793635,6.37397 c -1.470935,-2.802903 -5.024754,-9.646763 -5.024754,-9.646763 0,0 1.573775,22.456538 2.109409,36.592858 0.651227,17.18604 -13.979687,34.19209 10.993039,33.38505 z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.89625"
+     id="body"
+     sodipodi:nodetypes="ccccccccccccc" />
+  <ellipse
+     transform="matrix(0.99967054,-0.02566717,0.01974761,0.999805,0,0)"
+     cx="63.293373"
+     cy="130.42395"
+     rx="2.0304425"
+     ry="1.91204"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.42429"
+     id="ellipse673" />
+  <path
+     d="m 67.236999,129.08808 c 0.385041,-2.09798 -2.961142,-4.02769 -5.67814,-3.77164"
+     fill="none"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-width="1.21472"
+     id="angry2" />
+  <path
+     d="m 64.340253,136.96971 c 3.913924,-2.40336 7.740283,-3.1414 12.804219,-1.61577"
+     fill="none"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.6"
+     id="angry"
+     sodipodi:nodetypes="cc" />
+  <ellipse
+     transform="matrix(-0.99967054,-0.02566717,-0.01974761,0.999805,0,0)"
+     cx="-74.771416"
+     cy="125.99317"
+     rx="2.0304425"
+     ry="1.91204"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-miterlimit="4.6462"
+     stroke-width="1.42429"
+     id="ellipse679" />
+  <path
+     d="m 70.873408,128.20227 c -0.38504,-2.09798 1.739037,-3.89236 4.455831,-3.63619"
+     fill="none"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-width="1.21473"
+     id="angry3" />
+  <path
+     d="m 64.274738,136.33923 c 5.877249,1.54526 9.578422,0.34437 11.991475,-1.8728"
+     fill="none"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.96166"
+     id="happy"
+     display="none" />
+  <path
+     d="m 64.278158,136.34081 c 5.473614,-0.48664 8.186163,-0.71248 12.876154,-1.15728"
+     fill="none"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.96166"
+     id="neutral" />
+  <path
+     d="m 56.037295,99.517594 c 8.849518,7.111016 19.008951,0.895986 19.577001,-0.314293 l -0.26825,12.061209 c -2.312735,2.62743 -13.381934,4.79278 -18.548126,0.3092 z"
+     fill="#b4b4b4"
+     stroke="#000000"
+     stroke-width="1.52234"
+     id="metal14" />
+  <ellipse
+     cx="58.784454"
+     cy="107.02936"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.325"
+     id="metal13"
+     rx="0.26188716"
+     ry="0.24047823" />
+  <ellipse
+     cx="73.002045"
+     cy="106.78242"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.325"
+     id="metal12"
+     rx="0.26188716"
+     ry="0.24047823" />
+  <circle
+     cx="64.123161"
+     cy="65.054153"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="74.305077"
+     cy="61.5355"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-7"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="83.658516"
+     cy="56.7593"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-9"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="91.138817"
+     cy="51.039188"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-2"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="101.96426"
+     cy="34.121212"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-0"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="97.346947"
+     cy="43.252647"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-23"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="115.88744"
+     cy="41.585037"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-75"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="109.12112"
+     cy="37.873692"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-92"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="64.981697"
+     cy="48.585602"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-28"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="59.975624"
+     cy="38.278805"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-97"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="56.589508"
+     cy="10.773018"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-3"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="42.394501"
+     cy="8.7234402"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-1"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+  <circle
+     cx="56.710426"
+     cy="25.662724"
+     fill="#acacac"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.11712"
+     id="metal15-6"
+     r="0.44999999"
+     style="stroke-width:1.117;stroke-dasharray:none" />
+</svg>
