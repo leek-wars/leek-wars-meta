@@ -14,6 +14,7 @@ def execute():
 
 	colors = {
 		'attack': [(255, 50, 0), (255, 0, 0)],
+		'life_damage': [(255, 50, 120), (255, 0, 120)],
 		'shield': [(255, 140, 0), (255, 127, 0)],
 		'heal': [(150, 255, 0), (110, 255, 0)],
 		'boost': [(0, 100, 255), (0, 30, 255)],
@@ -21,26 +22,42 @@ def execute():
 		'shackle': [(150, 0, 255), (127, 0, 255)],
 		'damage_return': [(0, 100, 255), (0, 160, 255)],
 		'poison': [(200, 0, 255), (255, 0, 255)],
-		'other': [(170, 170, 170), (170, 170, 170)]
+		'other': [(170, 170, 170), (170, 170, 170)],
+		'nova': [(0, 255, 180), (0, 255, 180)]
 	}
 	other_color = [(255, 255, 255), (0, 0, 0)]
 
 	chips = {
 		'attack': ['shock', 'pebble', 'spark', 'ice', 'rock', 'flash', 'flame', 'stalactite',
-				   'lightning', 'rockfall', 'iceberg', 'meteorite', 'devil_strike', 'burning'],
-		'shield': ['helmet', 'wall', 'shield', 'rampart', 'fortress', 'carapace', 'armor'],
+				   'lightning', 'rockfall', 'iceberg', 'meteorite', 'devil_strike', 'burning', 'plasma'],
+		'shield': [
+			'helmet', 'wall', 'shield', 'rampart', 'fortress', 'carapace', 'armor', 'dome'
+		],
 		'heal':   ['bandage', 'cure', 'drip', 'vaccine', 'loam', 'regeneration', 'remission',
-				   'fertilizer', 'resurrection', 'armoring', 'elevation'],
+				   'fertilizer', 'resurrection', 'armoring', 'vampirization', 'elevation', 'therapy', 'serum'],
 		'boost':  ['stretching', 'protein', 'leather_boots', 'steroid', 'warm_up', 'winged_boots',
 				   'whip', 'reflexes', 'doping', 'acceleration', 'seven_league_boots', 'rage',
 				   'adrenaline', 'solidification', 'motivation', 'ferocity', 'dressage', 'bark',
-				   'collar', 'knowledge', 'wizardry'],
+				   'collar', 'covetousness', 'precipitation', 'knowledge', 'wizardry'],
 		'summon': ['puny_bulb', 'rocky_bulb', 'iced_bulb', 'healer_bulb', 'fire_bulb',
-				   'lightning_bulb', 'metallic_bulb'],
-		'damage_return' : ['thorn', 'mirror'],
-		'shackle': ['ball_and_chain', 'slow_down', 'soporific', 'tranquilizer', 'fracture'],
-		'poison': ['toxin', 'venom', 'plague', 'covid'],
-		'other': ['liberation', 'teleportation', 'inversion', 'antidote']
+				   'lightning_bulb', 'metallic_bulb', 'wizard_bulb', 'tactician_bulb', 'corn', 'chilli_pepper',
+				   'savant_bulb'],
+		'damage_return' : [
+			'thorn', 'mirror', 'bramble'
+		],
+		'shackle': [
+			'ball_and_chain', 'slow_down', 'soporific', 'tranquilizer', 'fracture',
+			'crushing', 'brainwashing'
+		],
+		'poison': [
+			'toxin', 'venom', 'plague', 'covid', 'arsenic'
+		],
+		'other': [
+			'liberation', 'teleportation', 'inversion', 'antidote', 'jump', 
+			'grapple', 'repotting', 'boxing_glove', 'manumission'
+		],
+		'nova': ['alteration', 'mutation', 'transmutation', 'desintegration'],
+		'life_damage': ['punishment']
 	}
 	# force_color = (133, 41, 0)
 	force_color = (199, 61, 0)
@@ -50,6 +67,7 @@ def execute():
 	wisdom_color = (94, 191, 0)
 	mp_color = (0, 167, 0)
 	poison_color = (138, 0, 120)
+	shakle_color = (150, 0, 255)
 	custom_colors = {
 		# TP
 		'adrenaline': tp_color,
@@ -86,6 +104,10 @@ def execute():
 		'jump': agi_color,
 		'liberation': (255, 50, 50),
 		'inversion': (63, 128, 255),
+		'repotting': (63, 128, 255),
+		'grapple': (63, 128, 255),
+		'boxing_glove': (63, 128, 255),
+		'manumission': shakle_color
 	}
 
 	files = [f for f in listdir(black_folder) if isfile(join(black_folder, f))]
@@ -112,7 +134,7 @@ def execute():
 		if color is None:
 			continue
 
-		print "Color: " + str(color)
+		print "Chip " + str(chip) + " color: " + str(color)
 
 		pdb.plug_in_vinvert(image, drawable)
 
@@ -188,23 +210,23 @@ def execute():
 
 
 		#### Glyph
-		# glyph = pdb.file_png_load(black_folder + file, black_folder + file)
-		# glyph_drawable = pdb.gimp_image_get_active_drawable(glyph)
-		# pdb.gimp_image_scale_full(glyph, 310, 310, INTERPOLATION_CUBIC)
+		glyph = pdb.file_png_load(black_folder + file, black_folder + file)
+		glyph_drawable = pdb.gimp_image_get_active_drawable(glyph)
+		pdb.gimp_image_scale_full(glyph, 310, 310, INTERPOLATION_CUBIC)
+		
+		pdb.gimp_item_transform_scale(glyph_drawable, 30, 30, 280, 280)
 
-		# pdb.gimp_item_transform_scale(glyph_drawable, 30, 30, 280, 280)
+		pdb.gimp_layer_resize_to_image_size(pdb.gimp_image_get_active_layer(glyph))
+		
+		pdb.script_fu_neon_logo_alpha(glyph, glyph_drawable, 45.0, (0,0,0,0), color[1], 0)
 
-		# pdb.gimp_layer_resize_to_image_size(pdb.gimp_image_get_active_layer(glyph))
+		pdb.gimp_image_remove_layer(glyph, pdb.gimp_image_get_active_drawable(glyph))
 
-		# pdb.script_fu_neon_logo_alpha(glyph, glyph_drawable, 45.0, (0,0,0,0), color[1], 0)
+		pdb.gimp_image_merge_visible_layers(glyph, EXPAND_AS_NECESSARY)
+		pdb.gimp_image_scale_full(glyph, 100, 100, INTERPOLATION_CUBIC)
 
-		# pdb.gimp_image_remove_layer(glyph, pdb.gimp_image_get_active_drawable(glyph))
-
-		# pdb.gimp_image_merge_visible_layers(glyph, EXPAND_AS_NECESSARY)
-		# pdb.gimp_image_scale_full(glyph, 100, 100, INTERPOLATION_CUBIC)
-
-		# filename = glyph_folder + file
-		# pdb.file_png_save_defaults(glyph, pdb.gimp_image_get_active_drawable(glyph), filename, filename)
+		filename = glyph_folder + file
+		pdb.file_png_save_defaults(glyph, pdb.gimp_image_get_active_drawable(glyph), filename, filename)
 
 		#~ break
 
