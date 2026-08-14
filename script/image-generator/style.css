@@ -1,0 +1,230 @@
+/* Chrome de l'outil, aligné sur les jetons du redesign v3
+   (client-develop/src/redesign/tokens.scss) : rayons à 0, profondeur par le trait. */
+
+:root, :root[data-theme="dark"] {
+	--bg: #0B0F0B;
+	--bg-elev: #11161A;
+	--bg-panel: #0E1316;
+	--bg-input: #0A0E10;
+	--line: rgba(255, 255, 255, 0.08);
+	--line-strong: rgba(255, 255, 255, 0.16);
+	--ink: #E8F0E6;
+	--ink-2: #A8B4A4;
+	--ink-3: #6B7A66;
+	--green: #7CFF6B;
+	--green-glow: rgba(124, 255, 107, 0.18);
+	--amber: #FFB23A;
+	--btn-text: #000;
+}
+:root[data-theme="light"] {
+	--bg: #F2EEDF;
+	--bg-elev: #FBF7E8;
+	--bg-panel: #F7F2DF;
+	--bg-input: #FFFCF0;
+	--line: rgba(14, 20, 16, 0.12);
+	--line-strong: rgba(14, 20, 16, 0.28);
+	--ink: #0E1410;
+	--ink-2: #4A5847;
+	--ink-3: #7A8676;
+	--green: #1F8A3B;
+	--green-glow: rgba(31, 138, 59, 0.15);
+	--amber: #C77A0E;
+	--btn-text: #FBF7E8;
+}
+
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--ink);
+	font-family: 'JetBrains Mono', 'DejaVu Sans Mono', monospace;
+	font-size: 13px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 16px;
+	background: var(--bg-elev);
+	border-bottom: 1.5px solid var(--line-strong);
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+h1 {
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	margin: 0;
+}
+.accent { color: var(--green); }
+.header-actions { display: flex; gap: 10px; align-items: center; }
+#status { color: var(--ink-2); font-size: 12px; }
+
+.layout {
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	gap: 12px;
+	padding: 12px;
+	align-items: start;
+}
+aside {
+	position: sticky;
+	top: 54px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-height: calc(100vh - 66px);
+	overflow-y: auto;
+}
+
+.panel {
+	background: var(--bg-panel);
+	border: 1.5px solid var(--line-strong);
+	padding: 10px 12px 12px;
+}
+.panel h2 {
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--ink-2);
+	margin: 0 0 10px;
+	border-bottom: 1px solid var(--line);
+	padding-bottom: 6px;
+}
+.panel.warn h2 { color: var(--amber); }
+.panel p { color: var(--ink-2); font-size: 12px; }
+.missing { color: var(--ink-3); }
+
+.control { margin-bottom: 8px; }
+.control label {
+	display: flex;
+	justify-content: space-between;
+	color: var(--ink-2);
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+.control output { color: var(--ink); }
+.control input[type=range] { width: 100%; accent-color: var(--green); }
+.control.checkbox label { justify-content: flex-start; gap: 6px; }
+.control input[type=checkbox] { accent-color: var(--green); }
+select, button {
+	font: inherit;
+	color: var(--ink);
+	background: var(--bg-input);
+	border: 1.5px solid var(--line-strong);
+	border-radius: 0;
+	padding: 5px 8px;
+	width: 100%;
+}
+button { cursor: pointer; margin-top: 6px; }
+button:hover { border-color: var(--green); }
+button.small { font-size: 11px; padding: 3px 8px; }
+#theme-toggle { width: auto; margin: 0; }
+
+/* Palette */
+.palette-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 4px;
+}
+.palette-row span { flex: 1; color: var(--ink-2); font-size: 12px; }
+.palette-row input[type=color] {
+	width: 26px;
+	height: 20px;
+	padding: 0;
+	border: 1px solid var(--line-strong);
+	background: none;
+	cursor: pointer;
+}
+
+/* Grilles d'aperçu */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+	gap: 8px;
+}
+.tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3px;
+	cursor: pointer;
+	padding: 4px 2px;
+	border: 1px solid transparent;
+}
+.tile:hover { border-color: var(--green); background: var(--green-glow); }
+.tile canvas { width: 72px; height: 72px; image-rendering: auto; }
+.tile .name {
+	font-size: 10px;
+	color: var(--ink-3);
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 84px;
+}
+.tile.guess .name::after { content: ' ?'; color: var(--amber); }
+.section-head {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 10px;
+}
+.section-head .swatch {
+	width: 10px;
+	height: 10px;
+	border: 1px solid var(--line-strong);
+}
+.section-head .count { color: var(--ink-3); font-size: 11px; }
+
+/* Contexte : faux slots du redesign */
+.context-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.context-board {
+	flex: 1;
+	min-width: 300px;
+	padding: 14px;
+	display: grid;
+	grid-template-columns: repeat(8, 64px);   /* 24 puces sur 3 lignes */
+	gap: 8px;
+	justify-content: center;
+	border: 1.5px solid;
+}
+.context-board[data-ctx=dark]  { background: #0E1316; border-color: rgba(255,255,255,0.16); }
+.context-board[data-ctx=light] { background: #F7F2DF; border-color: rgba(14,20,16,0.28); }
+.ctx-slot {
+	width: 64px;
+	height: 64px;
+	display: grid;
+	place-items: center;
+	border: 1.5px solid;
+}
+.context-board[data-ctx=dark]  .ctx-slot { background: #0A0E10; border-color: rgba(255,255,255,0.16); }
+.context-board[data-ctx=light] .ctx-slot { background: #FFFCF0; border-color: rgba(14,20,16,0.28); }
+.ctx-slot canvas { width: 52px; height: 52px; }
+
+/* Dialogue de détail */
+dialog {
+	background: var(--bg-panel);
+	color: var(--ink);
+	border: 1.5px solid var(--line-strong);
+	padding: 16px;
+	min-width: 420px;
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
+dialog h2 { margin: 0 0 12px; font-size: 13px; }
+.detail-previews { display: flex; gap: 16px; }
+.detail-previews figure { margin: 0; text-align: center; }
+.detail-previews figcaption { color: var(--ink-3); font-size: 11px; margin-top: 4px; }
+.detail-previews canvas { width: 160px; height: 160px; border: 1px solid var(--line); }
+#detail-dark  { background: #0B0F0B; }
+#detail-light { background: #F2EEDF; }
+.detail-controls { margin: 12px 0; display: flex; gap: 10px; align-items: center; }
+.detail-controls label { display: flex; gap: 8px; align-items: center; color: var(--ink-2); }
+.detail-controls select { width: auto; }
+.guess-note { color: var(--amber); font-size: 11px; }
+.detail-actions { display: flex; gap: 8px; }
+.detail-actions button { width: auto; }
+
+code { color: var(--green); }

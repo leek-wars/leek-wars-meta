@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Leek Wars — Générateur puces & apparats</title>
+	<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+	<header>
+		<h1><span class="accent">◆</span> GÉNÉRATEUR PUCES &amp; APPARATS</h1>
+		<div class="header-actions">
+			<span id="status"></span>
+			<button id="theme-toggle" title="Basculer le thème de prévisualisation">☾ Sombre</button>
+		</div>
+	</header>
+
+	<div class="layout">
+		<aside>
+			<section class="panel">
+				<h2>Préréglage</h2>
+				<div class="control">
+					<select id="preset">
+						<option value="classique">Classique v3 (puces actuelles, sans arrondi)</option>
+						<option value="relief">Relief 3D (volume éclairé)</option>
+						<option value="detoure">Détouré (comme armes/composants)</option>
+						<option value="illustre">Illustré (halo + reflet)</option>
+						<option value="ligne-claire">Ligne claire (contour noir)</option>
+						<option value="pixel">Pixel (ombre dure + liseré)</option>
+						<option value="plat">Plat</option>
+						<option value="encadre">Encadré</option>
+						<option value="immersif">Immersif</option>
+					</select>
+				</div>
+			</section>
+
+			<section class="panel">
+				<h2>Tuile</h2>
+				<div class="control checkbox"><label><input type="checkbox" id="p-bgOn" checked> Fond de tuile</label></div>
+				<div class="control"><label>Rayon <output>2</output></label><input type="range" id="p-radius" min="0" max="16" step="1" value="2"></div>
+				<div class="control"><label>Teinte du fond <output>13%</output></label><input type="range" id="p-bgTint" min="0" max="40" step="1" value="13"></div>
+				<div class="control"><label>Dégradé vertical <output>0%</output></label><input type="range" id="p-bgGradient" min="0" max="20" step="1" value="0"></div>
+				<div class="control"><label>Bordure <output>1.5</output></label><input type="range" id="p-borderWidth" min="0" max="6" step="0.5" value="1.5"></div>
+				<div class="control"><label>Opacité bordure <output>90%</output></label><input type="range" id="p-borderAlpha" min="0" max="100" step="5" value="90"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-borderBlack"> Bordure noire (ligne claire)</label></div>
+			</section>
+
+			<section class="panel">
+				<h2>Glyphe</h2>
+				<div class="control"><label>Échelle <output>68%</output></label><input type="range" id="p-glyphScale" min="40" max="90" step="1" value="68"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-outlineOn" checked> Contour noir (ligne claire)</label></div>
+				<div class="control"><label>Épaisseur du contour <output>3</output></label><input type="range" id="p-outlineWidth" min="0.5" max="6" step="0.5" value="3"></div>
+				<div class="control"><label>Modelé (duotone) <output>22%</output></label><input type="range" id="p-duotone" min="0" max="50" step="1" value="22"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-shadowOn" checked> Ombre dure</label></div>
+				<div class="control"><label>Décalage ombre <output>3</output></label><input type="range" id="p-shadowOffset" min="1" max="8" step="0.5" value="3"></div>
+				<div class="control"><label>Opacité ombre <output>45%</output></label><input type="range" id="p-shadowAlpha" min="0" max="100" step="5" value="45"></div>
+			</section>
+
+			<section class="panel">
+				<h2>Classique</h2>
+				<div class="control checkbox"><label><input type="checkbox" id="p-classicOn" checked> Recette des puces actuelles</label></div>
+				<div class="control"><label>Halo autour du glyphe <output>5</output></label><input type="range" id="p-haloWidth" min="0" max="12" step="0.5" value="5"></div>
+				<div class="control"><label>Intensité du fond <output>52%</output></label><input type="range" id="p-bgPale" min="10" max="90" step="2" value="52"></div>
+				<div class="control"><label>Cadre noir extérieur <output>2</output></label><input type="range" id="p-blackFrame" min="0" max="8" step="0.5" value="2"></div>
+				<div class="control"><label>Coupe des coins (45°) <output>0</output></label><input type="range" id="p-cornerCut" min="0" max="30" step="1" value="0"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-cutBothCorners" checked> Couper les deux coins (sinon haut-gauche seul)</label></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-pompCutInverted" checked> Apparats : coins opposés</label></div>
+				<div class="control"><label>Apparats : échelle du glyphe <output>65%</output></label><input type="range" id="p-pompGlyphScale" min="35" max="90" step="1" value="65"></div>
+				<div class="control"><label>Apparats : bordure <output>6</output></label><input type="range" id="p-pompBorderWidth" min="0" max="16" step="0.5" value="6"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-cropToContent" checked> Recadrer sur le contenu</label></div>
+			</section>
+
+			<section class="panel">
+				<h2>Relief</h2>
+				<div class="control checkbox"><label><input type="checkbox" id="p-reliefOn" checked> Volume éclairé</label></div>
+				<div class="control"><label>Largeur du biseau <output>22%</output></label><input type="range" id="p-bevel" min="4" max="60" step="1" value="22"></div>
+				<div class="control"><label>Force du relief <output>55%</output></label><input type="range" id="p-relief" min="5" max="100" step="5" value="55"></div>
+				<div class="control"><label>Spéculaire <output>45%</output></label><input type="range" id="p-specular" min="0" max="100" step="5" value="45"></div>
+			</section>
+
+			<section class="panel">
+				<h2>Artistique</h2>
+				<div class="control"><label>Halo lumineux <output>55%</output></label><input type="range" id="p-glow" min="0" max="100" step="5" value="55"></div>
+				<div class="control"><label>Éclat de bord <output>55%</output></label><input type="range" id="p-rimLight" min="0" max="100" step="5" value="55"></div>
+				<div class="control"><label>Reflet diagonal <output>13%</output></label><input type="range" id="p-shine" min="0" max="40" step="1" value="13"></div>
+				<div class="control"><label>Vignettage <output>22%</output></label><input type="range" id="p-vignette" min="0" max="100" step="5" value="22"></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-innerLine" checked> Liseré intérieur clair</label></div>
+			</section>
+
+			<section class="panel">
+				<h2>Détails</h2>
+				<div class="control checkbox"><label><input type="checkbox" id="p-strip" checked> Liseré pointillé bas</label></div>
+				<div class="control checkbox"><label><input type="checkbox" id="p-cornerBadge"> Carré de coin</label></div>
+			</section>
+
+			<section class="panel">
+				<h2>Palette</h2>
+				<div id="palette"></div>
+				<button id="palette-reset" class="small">Réinitialiser la palette</button>
+			</section>
+
+			<section class="panel">
+				<h2>Export</h2>
+				<div class="control">
+					<label>Taille</label>
+					<select id="export-size">
+						<option value="100" selected>100 × 100 (comme actuel)</option>
+						<option value="200">200 × 200</option>
+						<option value="320">320 × 320</option>
+					</select>
+				</div>
+				<div class="control">
+					<label>Thèmes</label>
+					<select id="export-themes">
+						<option value="both" selected>Les deux (dark/ + light/)</option>
+						<option value="dark">Sombre seul</option>
+						<option value="light">Clair seul</option>
+					</select>
+				</div>
+				<button id="export-chips">Exporter les puces…</button>
+				<button id="export-pomps">Exporter les apparats…</button>
+				<button id="config-copy" class="small">Copier la config JSON</button>
+				<button id="config-reset" class="small">Tout réinitialiser</button>
+			</section>
+		</aside>
+
+		<main>
+			<section class="panel" id="context-panel">
+				<h2>En contexte (slots du redesign)</h2>
+				<div class="context-row">
+					<div class="context-board" data-ctx="dark"></div>
+					<div class="context-board" data-ctx="light"></div>
+				</div>
+			</section>
+
+			<div id="sections"></div>
+
+			<section class="panel" id="pomp-section">
+				<h2>Apparats</h2>
+				<div class="grid" id="pomp-grid"></div>
+			</section>
+
+			<section class="panel warn" id="missing-panel">
+				<h2>Sources noires manquantes</h2>
+				<p>Ces images en jeu n'ont pas d'icône noire dans <code>meta/image/chip/png/</code> et ne peuvent pas être régénérées :</p>
+				<p id="missing-list" class="missing"></p>
+			</section>
+		</main>
+	</div>
+
+	<dialog id="detail">
+		<h2 id="detail-title"></h2>
+		<div class="detail-previews">
+			<figure><canvas id="detail-dark"></canvas><figcaption>Sombre</figcaption></figure>
+			<figure><canvas id="detail-light"></canvas><figcaption>Clair</figcaption></figure>
+		</div>
+		<div class="detail-controls">
+			<label>Catégorie <select id="detail-type"></select></label>
+			<span id="detail-guess" class="guess-note"></span>
+		</div>
+		<div class="detail-actions">
+			<button id="detail-dl-dark" class="small">PNG sombre</button>
+			<button id="detail-dl-light" class="small">PNG clair</button>
+			<button id="detail-close" class="small">Fermer</button>
+		</div>
+	</dialog>
+
+	<!-- ?v= : bump après édition si le navigateur sert encore une version en cache -->
+	<script src="data.js?v=15"></script>
+	<script src="app.js?v=15"></script>
+</body>
+</html>
