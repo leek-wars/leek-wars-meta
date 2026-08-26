@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Leek Wars — Générateur puces & apparats</title>
-	<link rel="stylesheet" href="style.css?v=15">
+	<link rel="stylesheet" href="style.css?v=29">
 </head>
 <body>
 	<header>
@@ -21,6 +21,7 @@
 				<h2>Préréglage</h2>
 				<div class="control">
 					<select id="preset">
+						<option value="glyphe">Glyphe de combat (néon pixelisé)</option>
 						<option value="classique">Classique v3 (puces actuelles, sans arrondi)</option>
 						<option value="relief">Relief 3D (volume éclairé)</option>
 						<option value="detoure">Détouré (comme armes/composants)</option>
@@ -54,6 +55,19 @@
 				<div class="control checkbox"><label><input type="checkbox" id="p-shadowOn" checked> Ombre dure</label></div>
 				<div class="control"><label>Décalage ombre <output>3</output></label><input type="range" id="p-shadowOffset" min="1" max="8" step="0.5" value="3"></div>
 				<div class="control"><label>Opacité ombre <output>45%</output></label><input type="range" id="p-shadowAlpha" min="0" max="100" step="5" value="45"></div>
+			</section>
+
+			<section class="panel">
+				<h2>Glyphe de combat</h2>
+				<div class="control checkbox"><label><input type="checkbox" id="p-glyphMode"> Néon sur fond transparent</label></div>
+				<div class="control"><label>Pixelisation (0 = aucune) <output>28</output></label><input type="range" id="p-pixelLevel" min="0" max="80" step="1" value="28"></div>
+				<div class="control"><label>Épaisseur du tube <output>7</output></label><input type="range" id="p-neonWidth" min="0.5" max="14" step="0.5" value="7"></div>
+				<div class="control"><label>Portée de la lueur <output>4.5</output></label><input type="range" id="p-neonGlow" min="1" max="30" step="0.5" value="4.5"></div>
+				<div class="control"><label>Intensité de la lueur <output>70%</output></label><input type="range" id="p-neonGlowAlpha" min="0" max="100" step="5" value="70"></div>
+				<div class="control"><label>Taille du glyphe <output>70%</output></label><input type="range" id="p-glyphNeonScale" min="40" max="95" step="1" value="70"></div>
+				<div class="control"><label>Saturation de la teinte <output>70%</output></label><input type="range" id="p-neonVivid" min="0" max="100" step="5" value="70"></div>
+				<div class="control"><label>Cœur blanc <output>90%</output></label><input type="range" id="p-neonCore" min="0" max="100" step="5" value="90"></div>
+				<div class="control"><label>Blancheur du cœur <output>60%</output></label><input type="range" id="p-neonWhiteBoost" min="0" max="200" step="10" value="60"></div>
 			</section>
 
 			<section class="panel">
@@ -133,6 +147,11 @@
 				</div>
 			</section>
 
+			<section class="panel" id="combat-panel" hidden>
+				<h2>En combat (glyphes flottant au-dessus des cibles)</h2>
+				<div class="combat-board"></div>
+			</section>
+
 			<div id="sections"></div>
 
 			<section class="panel" id="pomp-section">
@@ -166,7 +185,7 @@
 	</dialog>
 
 	<!-- ?v= : bump après édition si le navigateur sert encore une version en cache -->
-	<script src="data.js?v=15"></script>
-	<script src="app.js?v=15"></script>
+	<script src="data.js?v=29"></script>
+	<script src="app.js?v=29"></script>
 </body>
 </html>

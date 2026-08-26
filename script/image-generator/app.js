@@ -6,7 +6,14 @@ const STORAGE_KEY = 'lw-image-generator'
 const ART_OFF = { glow: 0, shine: 0, vignette: 0, rimLight: 0, innerLine: false }
 const RELIEF_OFF = { reliefOn: false, bevel: 22, relief: 55, specular: 45 }
 const CLASSIC_OFF = { classicOn: false, haloWidth: 5, bgPale: 52, customHalo: true, blackFrame: 0, cropToContent: true, cornerCut: 0, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6 }
+const GLYPH_OFF = { glyphMode: false, pixelLevel: 0, neonWidth: 7, neonGlow: 4.5, neonGlowAlpha: 70, glyphNeonScale: 70, neonVivid: 70, neonCore: 90, neonWhiteBoost: 60 }
 const PRESETS = {
+	// Glyphes de combat : néon sur fond transparent, base pixelisée.
+	glyphe: { radius: 0, bgTint: 0, bgGradient: 0, borderWidth: 0, borderAlpha: 0, borderBlack: false, glyphScale: 84, shadowOn: false, shadowOffset: 3, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: false,
+		glow: 0, shine: 0, vignette: 0, rimLight: 0, innerLine: false,
+		reliefOn: false, bevel: 22, relief: 55, specular: 45,
+		classicOn: false, haloWidth: 5, bgPale: 52, customHalo: true, blackFrame: 0, cropToContent: true, cornerCut: 0, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6,
+		glyphMode: true, pixelLevel: 0, neonWidth: 7, neonGlow: 4.5, neonGlowAlpha: 70, glyphNeonScale: 70, neonVivid: 70, neonCore: 90, neonWhiteBoost: 60 },
 	// Les puces actuelles du jeu, dérondies et déglacées : la recette du script
 	// GIMP avec radius 0 et plus aucun reflet. Réglages validés par Pierre.
 	// Ne PAS activer `outlineOn` ici : le cerne noir est obtenu par dilatation
@@ -15,22 +22,22 @@ const PRESETS = {
 	classique: { radius: 0, bgTint: 0, bgGradient: 0, borderWidth: 5, borderAlpha: 100, borderBlack: false, glyphScale: 70, shadowOn: false, shadowOffset: 4, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 25, bgOn: true,
 		glow: 0, shine: 0, vignette: 50, rimLight: 0, innerLine: false,
 		reliefOn: false, bevel: 31, relief: 55, specular: 45,
-		classicOn: true, haloWidth: 5, bgPale: 90, customHalo: true, blackFrame: 2, cropToContent: true, cornerCut: 0, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6 },
+		classicOn: true, haloWidth: 5, bgPale: 90, customHalo: true, blackFrame: 2, cropToContent: true, cornerCut: 0, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6, ...GLYPH_OFF },
 	relief: { radius: 2, bgTint: 16, bgGradient: 10, borderWidth: 3.5, borderAlpha: 100, borderBlack: true, glyphScale: 76, shadowOn: true, shadowOffset: 2.5, shadowAlpha: 35, strip: false, cornerBadge: false, outlineOn: true, outlineWidth: 2, duotone: 30, bgOn: true,
 		glow: 28, shine: 8, vignette: 18, rimLight: 0, innerLine: false,
-		reliefOn: true, bevel: 22, relief: 55, specular: 45 , ...CLASSIC_OFF },
+		reliefOn: true, bevel: 22, relief: 55, specular: 45 , ...CLASSIC_OFF, ...GLYPH_OFF },
 	// Comme les images d'armes et de composants : l'objet seul, détouré, sans
 	// fond — c'est le slot du site qui fournit le cadre.
 	detoure: { radius: 0, bgTint: 0, bgGradient: 0, borderWidth: 0, borderAlpha: 0, borderBlack: true, glyphScale: 88, shadowOn: false, shadowOffset: 2.5, shadowAlpha: 35, strip: false, cornerBadge: false, outlineOn: true, outlineWidth: 2.5, duotone: 30, bgOn: false,
 		glow: 0, shine: 0, vignette: 0, rimLight: 0, innerLine: false,
-		reliefOn: true, bevel: 24, relief: 60, specular: 50 , ...CLASSIC_OFF },
+		reliefOn: true, bevel: 24, relief: 60, specular: 50 , ...CLASSIC_OFF, ...GLYPH_OFF },
 	illustre: { radius: 2, bgTint: 22, bgGradient: 14, borderWidth: 3.5, borderAlpha: 100, borderBlack: true, glyphScale: 70, shadowOn: false, shadowOffset: 3, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 30, bgOn: true,
-		glow: 55, shine: 13, vignette: 22, rimLight: 55, innerLine: true, ...RELIEF_OFF, ...CLASSIC_OFF },
-	'ligne-claire': { radius: 2, bgTint: 13, bgGradient: 0, borderWidth: 3.5, borderAlpha: 100, borderBlack: true, glyphScale: 70, shadowOn: true, shadowOffset: 3, shadowAlpha: 45, strip: true,  cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 15, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF },
-	pixel:    { radius: 2, bgTint: 13, bgGradient: 0, borderWidth: 1.5, borderAlpha: 90, borderBlack: false, glyphScale: 68, shadowOn: true,  shadowOffset: 3, shadowAlpha: 45, strip: true,  cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF },
-	plat:     { radius: 2, bgTint: 12, bgGradient: 0, borderWidth: 1.5, borderAlpha: 90, borderBlack: false, glyphScale: 70, shadowOn: false, shadowOffset: 3, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF },
-	encadre:  { radius: 0, bgTint: 8,  bgGradient: 0, borderWidth: 3,   borderAlpha: 100, borderBlack: false, glyphScale: 66, shadowOn: true, shadowOffset: 2.5, shadowAlpha: 40, strip: false, cornerBadge: true, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF },
-	immersif: { radius: 4, bgTint: 24, bgGradient: 10, borderWidth: 0,  borderAlpha: 0,  borderBlack: false, glyphScale: 72, shadowOn: true,  shadowOffset: 3.5, shadowAlpha: 55, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF },
+		glow: 55, shine: 13, vignette: 22, rimLight: 55, innerLine: true, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
+	'ligne-claire': { radius: 2, bgTint: 13, bgGradient: 0, borderWidth: 3.5, borderAlpha: 100, borderBlack: true, glyphScale: 70, shadowOn: true, shadowOffset: 3, shadowAlpha: 45, strip: true,  cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 15, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
+	pixel:    { radius: 2, bgTint: 13, bgGradient: 0, borderWidth: 1.5, borderAlpha: 90, borderBlack: false, glyphScale: 68, shadowOn: true,  shadowOffset: 3, shadowAlpha: 45, strip: true,  cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
+	plat:     { radius: 2, bgTint: 12, bgGradient: 0, borderWidth: 1.5, borderAlpha: 90, borderBlack: false, glyphScale: 70, shadowOn: false, shadowOffset: 3, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
+	encadre:  { radius: 0, bgTint: 8,  bgGradient: 0, borderWidth: 3,   borderAlpha: 100, borderBlack: false, glyphScale: 66, shadowOn: true, shadowOffset: 2.5, shadowAlpha: 40, strip: false, cornerBadge: true, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
+	immersif: { radius: 4, bgTint: 24, bgGradient: 10, borderWidth: 0,  borderAlpha: 0,  borderBlack: false, glyphScale: 72, shadowOn: true,  shadowOffset: 3.5, shadowAlpha: 55, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
 }
 
 const CONFIG_VERSION = 6
@@ -66,6 +73,18 @@ function alpha(hex, a) {
 	return `rgba(${r},${g},${b},${a})`
 }
 
+// Pousse une teinte vers sa version pleinement saturée (HSV : S=1, V=1).
+// `amount` = 0 garde la couleur d'origine, 1 la sature au maximum.
+function saturateColor(hex, amount) {
+	const rgb = hexToRgb(hex)
+	const max = Math.max(...rgb), min = Math.min(...rgb)
+	// Les teintes quasi neutres restent neutres : la catégorie Tactique est un
+	// gris à peine verdâtre (#A8B4A4), que saturer virerait au vert vif.
+	if (max === min || (max - min) / max < 0.12) return hex
+	const pure = rgb.map(v => (v - min) / (max - min) * 255)
+	return rgbToHex(rgb.map((v, i) => v + (pure[i] - v) * amount))
+}
+
 // Les deux fonctions du script GIMP historique (leekwars_chips.py), reprises à
 // l'identique : elles définissent le rendu des puces actuelles du jeu.
 // `dark` multiplie la luminosité en RGB ; `light` désature et éclaircit en HSV.
@@ -96,6 +115,11 @@ function lightColor(hex, l) {
 // ---------------------------------------------------------------------------
 // Chargement des sources
 
+// Jeton anti-cache renouvelé à chaque chargement de page : Chrome garde les
+// images en cache mémoire malgré le `Cache-Control: no-store` du serveur, et on
+// régénérait alors une puce depuis une icône noire périmée, sans rien voir.
+const CACHE_BUST = '?t=' + Date.now()
+
 function loadImage(url) {
 	return new Promise((resolve, reject) => {
 		const img = new Image()
@@ -108,7 +132,7 @@ function loadImage(url) {
 // SVG d'apparat sans PNG noir : on retire le template badge et les restes
 // hérités, puis on force un fill noir opaque sur ce qui reste.
 async function loadPompSvgGlyph(pomp) {
-	const text = await fetch(PATHS.pompSvg + pomp.svg).then(r => r.text())
+	const text = await fetch(PATHS.pompSvg + pomp.svg + CACHE_BUST).then(r => r.text())
 	const doc = new DOMParser().parseFromString(text, 'image/svg+xml')
 	for (const id of [...POMP_TEMPLATE_IDS, ...(pomp.leftovers || [])]) {
 		doc.getElementById(id)?.remove()
@@ -556,6 +580,139 @@ function cutRectPath(ctx, x, y, w, h, cut, bothCorners, inverted) {
 	ctx.closePath()
 }
 
+// --- Glyphes de combat : néon sur fond transparent -------------------------
+// Ce sont les images qui flottent au-dessus des cibles quand une puce est
+// lancée (client/public/image/chip/glyph/). L'ancien script GIMP les faisait
+// avec `script_fu_neon_logo_alpha` : un tube clair qui trace le CONTOUR de la
+// forme, entouré d'une lueur de la couleur de catégorie, l'intérieur restant
+// vide. On reproduit ça, avec une pixelisation optionnelle du masque en amont.
+
+// Masque binaire du glyphe, éventuellement ramené à une grille de N blocs.
+function glyphMask(item, S, box, pixelLevel) {
+	const c = document.createElement('canvas')
+	c.width = c.height = S
+	const ctx = c.getContext('2d', { willReadFrequently: true })
+	const b = sourceRect(item)
+	const scale = Math.min(box / b.w, box / b.h)
+	const dw = b.w * scale, dh = b.h * scale
+	const dx = (S - dw) / 2, dy = (S - dh) / 2
+
+	if (pixelLevel > 0) {
+		// Réduction à N×N (moyennée), seuillage pour des blocs francs, puis
+		// agrandissement au plus proche voisin : d'où les marches d'escalier.
+		const N = Math.max(4, Math.round(pixelLevel))
+		const small = document.createElement('canvas')
+		small.width = small.height = N
+		const sctx = small.getContext('2d', { willReadFrequently: true })
+		sctx.imageSmoothingQuality = 'high'
+		const sScale = N / S
+		sctx.drawImage(item.img, b.x, b.y, b.w, b.h, dx * sScale, dy * sScale, dw * sScale, dh * sScale)
+		const img = sctx.getImageData(0, 0, N, N)
+		for (let i = 0; i < N * N; i++) img.data[i * 4 + 3] = img.data[i * 4 + 3] > 110 ? 255 : 0
+		sctx.putImageData(img, 0, 0)
+		ctx.imageSmoothingEnabled = false
+		ctx.drawImage(small, 0, 0, S, S)
+	} else {
+		ctx.imageSmoothingQuality = 'high'
+		ctx.drawImage(item.img, b.x, b.y, b.w, b.h, dx, dy, dw, dh)
+	}
+	return ctx.getImageData(0, 0, S, S)
+}
+
+// Distance de chaque pixel au bord de la forme, en signé : négative dedans,
+// positive dehors. Deux transformées de chamfer, comme pour le relief.
+function signedDistance(alpha, S) {
+	const n = S * S, INF = 1e9, D = 1, Q = Math.SQRT2
+	const inside = new Float32Array(n), outside = new Float32Array(n)
+	for (let i = 0; i < n; i++) {
+		const solid = alpha[i * 4 + 3] > 127
+		inside[i] = solid ? INF : 0
+		outside[i] = solid ? 0 : INF
+	}
+	for (const f of [inside, outside]) {
+		for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) {
+			const i = y * S + x
+			if (f[i] === 0) continue
+			let d = f[i]
+			if (x > 0) d = Math.min(d, f[i - 1] + D)
+			if (y > 0) d = Math.min(d, f[i - S] + D)
+			if (x > 0 && y > 0) d = Math.min(d, f[i - S - 1] + Q)
+			if (x < S - 1 && y > 0) d = Math.min(d, f[i - S + 1] + Q)
+			f[i] = d
+		}
+		for (let y = S - 1; y >= 0; y--) for (let x = S - 1; x >= 0; x--) {
+			const i = y * S + x
+			if (f[i] === 0) continue
+			let d = f[i]
+			if (x < S - 1) d = Math.min(d, f[i + 1] + D)
+			if (y < S - 1) d = Math.min(d, f[i + S] + D)
+			if (x < S - 1 && y < S - 1) d = Math.min(d, f[i + S + 1] + Q)
+			if (x > 0 && y < S - 1) d = Math.min(d, f[i + S - 1] + Q)
+			f[i] = d
+		}
+	}
+	const signed = new Float32Array(n)
+	for (let i = 0; i < n; i++) signed[i] = outside[i] > 0 ? outside[i] : -inside[i]
+	return signed
+}
+
+function renderGlyphNeon(canvas, item, accent, outSize, P) {
+	const S = outSize * 4
+	const u = S / 100
+	const box = (P.glyphNeonScale || 84) / 100 * S
+	const mask = glyphMask(item, S, box, P.pixelLevel || 0)
+	const dist = signedDistance(mask.data, S)
+
+	const half = Math.max(0.5, (P.neonWidth || 3) * u / 2)   // demi-épaisseur du tube
+	const glowR = Math.max(1, (P.neonGlow || 10) * u)        // portée de la lueur
+	// Teinte poussée à saturation maximale : un vrai néon est une couleur pure,
+	// pas la teinte de l'interface.
+	const tint = saturateColor(accent, (P.neonVivid ?? 70) / 100)
+	const [ar, ag, ab] = hexToRgb(tint)
+	// Le blanc du cœur est ramené vers la teinte quand `neonCore` baisse : à 0
+	// le tube est entièrement coloré, à 100 il a un cœur blanc incandescent.
+	// `neonCore` pilote la LARGEUR du cœur blanc via l'exposant du dégradé :
+	// exposant élevé = blanc réduit au centre exact, exposant proche de 0 =
+	// tube quasi entièrement blanc avec juste un liseré coloré.
+	const coreWhite = (P.neonCore ?? 55) / 100
+	const whiteFalloff = 6 + (0.12 - 6) * coreWhite
+	const whiteBoost = 1 + (P.neonWhiteBoost ?? 0) / 100
+	const out = new ImageData(S, S)
+	const soft = 1.2 * u
+
+	for (let i = 0; i < S * S; i++) {
+		const ad = Math.abs(dist[i])
+		// Tube : plein jusqu'à `half`, puis fondu court pour l'antialiasing.
+		const core = ad <= half ? 1 : Math.max(0, 1 - (ad - half) / soft)
+		// Lueur : décroissance exponentielle de part et d'autre du tube.
+		const glow = Math.exp(-Math.max(0, ad - half) / glowR)
+		const a = Math.min(1, core + glow * (P.neonGlowAlpha || 70) / 100)
+		if (a <= 0.004) continue
+		// Blanc concentré au CENTRE du tube seulement : ses bords restent en
+		// couleur pure, ce qui donne au néon son contraste. Un cœur blanc sur
+		// toute l'épaisseur délave la teinte.
+		const t = Math.min(1, ad / half)
+		// `whiteBoost` élargit le plateau de blanc PUR sans toucher à
+		// l'épaisseur du tube : le centre sature à 255 sur une bande plus
+		// large, au lieu de n'atteindre le blanc qu'en un point.
+		const white = core * Math.min(1, Math.pow(1 - t, whiteFalloff) * whiteBoost)
+		out.data[i * 4]     = ar + (255 - ar) * white
+		out.data[i * 4 + 1] = ag + (255 - ag) * white
+		out.data[i * 4 + 2] = ab + (255 - ab) * white
+		out.data[i * 4 + 3] = a * 255
+	}
+
+	const off = document.createElement('canvas')
+	off.width = off.height = S
+	off.getContext('2d').putImageData(out, 0, 0)
+
+	canvas.width = canvas.height = outSize
+	const done = canvas.getContext('2d')
+	done.imageSmoothingQuality = 'high'
+	done.clearRect(0, 0, outSize, outSize)
+	done.drawImage(off, 0, 0, outSize, outSize)
+}
+
 // Chemin de tuile : coins coupés si demandé, sinon rectangle (arrondi ou non).
 function tileShape(ctx, x, y, w, h, r, cut, bothCorners, inverted) {
 	if (cut > 0) cutRectPath(ctx, x, y, w, h, cut, bothCorners, inverted)
@@ -579,6 +736,12 @@ function renderInto(canvas, item, theme, outSize) {
 	const cat = state.palette[typeOf(item)] || state.palette.other
 	const accent = theme === 'dark' ? cat.dark : cat.light
 	const base = BASE[theme]
+
+	// Glyphe de combat : pas de tuile, fond transparent.
+	if (P.glyphMode) {
+		renderGlyphNeon(canvas, item, cat.dark, outSize, P)
+		return
+	}
 
 	const off = document.createElement('canvas')
 	off.width = off.height = S
@@ -722,6 +885,7 @@ function renderAll() {
 			if (item.img && item.canvas) renderInto(item.canvas, item, state.theme, 100)
 		}
 		renderContext()
+		renderCombatBoard()
 	})
 }
 
@@ -744,6 +908,30 @@ function renderContext() {
 
 // ---------------------------------------------------------------------------
 // Construction de l'interface
+
+// Mise en situation des glyphes : quelques puces sur le sol d'une map de combat.
+const COMBAT_SAMPLE = ['flame', 'meteorite', 'bandage', 'shield', 'toxin', 'teleportation',
+	'protein', 'puny_bulb', 'mirror', 'fracture', 'mutation', 'rage']
+
+function buildCombatBoard() {
+	const board = document.querySelector('.combat-board')
+	for (const [i, name] of COMBAT_SAMPLE.entries()) {
+		const c = document.createElement('canvas')
+		c.dataset.name = name
+		if (i < 2) c.className = 'big'      // deux en grand, comme au-dessus d'une cible
+		board.appendChild(c)
+	}
+}
+
+function renderCombatBoard() {
+	const panel = document.getElementById('combat-panel')
+	panel.hidden = !state.params.glyphMode
+	if (panel.hidden) return
+	for (const c of panel.querySelectorAll('canvas')) {
+		const item = items.find(i => i.name === c.dataset.name)
+		if (item && item.img) renderInto(c, item, 'dark', c.classList.contains('big') ? 160 : 100)
+	}
+}
 
 function buildContextBoards() {
 	for (const board of document.querySelectorAll('.context-board')) {
@@ -834,7 +1022,7 @@ function buildPalette() {
 	}
 }
 
-const PERCENT_KEYS = new Set(['bgTint', 'bgGradient', 'borderAlpha', 'glyphScale', 'shadowAlpha', 'duotone', 'glow', 'shine', 'vignette', 'rimLight', 'bevel', 'relief', 'specular', 'bgPale', 'duotone', 'pompGlyphScale'])
+const PERCENT_KEYS = new Set(['bgTint', 'bgGradient', 'borderAlpha', 'glyphScale', 'shadowAlpha', 'duotone', 'glow', 'shine', 'vignette', 'rimLight', 'bevel', 'relief', 'specular', 'bgPale', 'duotone', 'pompGlyphScale', 'neonGlowAlpha', 'glyphNeonScale', 'neonVivid', 'neonCore', 'neonWhiteBoost'])
 function bindControls() {
 	for (const key of Object.keys(PRESETS.pixel)) {
 		const input = document.getElementById('p-' + key)
@@ -930,7 +1118,8 @@ async function exportItems(kind) {
 		return // annulé
 	}
 	const status = document.getElementById('status')
-	const list = items.filter(i => i.kind === kind && i.img)
+	// Les puces non sorties ne sortent jamais du générateur (dépôts publics).
+	const list = items.filter(i => i.kind === kind && i.img && !UNRELEASED.includes(i.name))
 	let done = 0
 	for (const theme of themes) {
 		const target = themes.length > 1 ? await dir.getDirectoryHandle(theme, { create: true }) : dir
@@ -994,6 +1183,7 @@ async function init() {
 
 	document.getElementById('missing-list').textContent = MISSING_SOURCES.join(', ')
 	buildContextBoards()
+	buildCombatBoard()
 	buildSections()
 	buildPalette()
 	bindControls()
@@ -1041,9 +1231,9 @@ async function init() {
 	await Promise.all(items.map(async item => {
 		try {
 			if (item.kind === 'chip') {
-				item.img = await loadImage(PATHS.chipIcons + item.name + '.png')
+				item.img = await loadImage(PATHS.chipIcons + item.name + '.png' + CACHE_BUST)
 			} else if (item.black) {
-				item.img = await loadImage(PATHS.pompBlack + item.name + '.png')
+				item.img = await loadImage(PATHS.pompBlack + item.name + '.png' + CACHE_BUST)
 			} else {
 				item.img = await loadPompSvgGlyph(item)
 			}
@@ -1057,6 +1247,7 @@ async function init() {
 	}))
 	status.textContent = `${loaded}/${items.length} sources chargées`
 	renderContext()
+	renderCombatBoard()
 }
 
 init()

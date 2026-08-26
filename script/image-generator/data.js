@@ -261,6 +261,13 @@ const MISSING_SOURCES = []
 //   (component/player/game/texture.ts, projectile volant de la puce Shuriken).
 const NOT_CHIPS = ['shuriken_star']
 
+// Puces déclarées ici mais PAS SORTIES dans le jeu : elles n'ont aucune image
+// dans client/public/image/chip/. Ne jamais les exporter — les deux dépôts
+// (meta et le client) sont PUBLICS, et publier leur image révélerait du contenu
+// non annoncé. `corn` et `chilli_pepper` sont `public => false` au registry,
+// `corruption` en est absente. Un export en lot les recrée sans prévenir.
+const UNRELEASED = ['corn', 'chilli_pepper', 'corruption']
+
 const PATHS = {
 	chipIcons: '/meta/image/chip/png/',
 	pompBlack: '/meta/image/pomp/black/',
