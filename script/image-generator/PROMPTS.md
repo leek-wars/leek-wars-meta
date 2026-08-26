@@ -12,6 +12,82 @@ d'image écrivent mal, les libellés parasitent la lecture.
 
 ---
 
+## Prompt H — redessiner les 3 visages TP (motivation, adrénaline, rage)
+
+Ces trois puces de PT partagent un concept fort : **un bloc noir carré qui
+remplit toute la case**, dont tous les traits sont des **découpes blanches**
+dans la masse — jamais des formes posées par-dessus. Le but est de garder
+exactement ce concept, mais mieux dessiné.
+
+**Joindre `lw-tp-faces-reference.png`** (dans ce dossier) : les trois icônes
+actuelles, dans l'ordre motivation / adrénaline / rage.
+
+```
+The attached image shows three existing icons from my game, Leek Wars:
+determination, adrenaline and rage. They are three angry faces that share one
+strong idea. Redraw all three, keeping that idea exactly, but drawn better.
+
+THE IDEA, which must be preserved:
+- Each face is ONE SOLID BLACK SQUARE that fills its whole cell, edge to edge,
+  with sharp 90-degree corners. The square IS the head. It is never a head
+  drawn inside a square, and never a rounded or organic silhouette.
+- Every feature — brows, eyes, nose, mouth, teeth — is a PURE WHITE CUT-OUT
+  carved into that black square. Nothing is drawn on top, nothing is outlined,
+  there are no grey tones and no floating shapes outside the square.
+- The features are bold angular wedges and slabs, geometric and confident,
+  never thin lines and never soft curves.
+
+HOW MANY SHAPES — aim for the middle, avoid both extremes:
+- Roughly 4 to 7 white cut-outs per face. Not 3, which looks empty and
+  unfinished. Not 12, which looks slick and over-rendered.
+- Each cut-out is a big chunky wedge, slab or blade. Nothing hair-thin.
+- FORBIDDEN: pupils, irises, wrinkles, frown lines, cheek creases, ear shapes,
+  shading facets, hatching, gradients, outlines.
+- The eyes are angular slits or wedges with NO pupil inside.
+
+THE TEETH — this is what usually goes wrong:
+- On the snarling face, the mouth is ONE big white opening. The fangs are NOT
+  white shapes: they are BLACK triangles biting INTO that white opening from
+  its top edge and its bottom edge, so the black of the square shows through.
+  Think of the fangs as notches cut back out of the mouth hole.
+- Do not draw teeth as a row of separate white rectangles or bars. That reads
+  as a machine grille, not a snarl.
+
+THE FEEL:
+- Blunt, graphic and a little crude, like a rubber stamp or a linocut — but
+  still confident and expressive. Do not make it slick, polished, cinematic or
+  comic-book realistic, and do not make it so bare that it looks like a smiley.
+- Refine the placement and the angles, not the level of detail: good balance
+  between brows and mouth, generous empty black space.
+- Keep all three visibly siblings: same square, same drawing language, same
+  weight of cut-outs, so they sit together in an inventory.
+
+THE THREE FACES, left to right, escalating:
+1. DETERMINATION — two angled eye wedges under two brow wedges, and one plain
+   horizontal bar for a firmly set mouth. Calm, controlled, focused.
+2. ADRENALINE — the same face wound up: brows driven harder down toward the
+   nose, eyes narrowed into sharper blades, a small angular nose wedge, and a
+   tense downturned mouth. Alert and strained.
+3. RAGE — feral. Heavy angry brows, furious slit eyes, a short angular muzzle
+   wedge, and a wide open snarling mouth whose black fang notches bite in from
+   above and below. The most extreme of the three.
+
+LAYOUT: one row of three equal square cells on a pure white background, with a
+wide white gutter between them so each can be cropped out on its own. No text,
+no labels, no numbers, no frames, no cell borders.
+
+Each face must stay instantly readable when shrunk to 64 pixels.
+```
+
+Intégration ensuite : découper chaque case, puis appliquer la recette de la
+section « Intégration » plus bas (luminance → alpha, bbox sur l'alpha seuillée,
+cadrage 250×250). Attention, les sources actuelles de ces trois-là ont une marge
+(200×200 dans un canevas de 250×250), ce qui les rend plus petites que les
+autres puces en jeu ; la recette produit un canevas rempli, donc elles
+retrouveront la taille commune.
+
+---
+
 ## Prompt G — les 14 icônes noires manquantes (GPT / Gemini)
 
 Le besoin le plus concret : 14 puces en jeu n'ont pas d'icône noire source et ne
