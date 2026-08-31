@@ -64,7 +64,7 @@ const CHIPS = [
 	{ name: 'apocalypse', type: 'attack' },
 
 	{ name: 'punishment', type: 'life_damage' },
-	{ name: 'hemorrhage', type: 'life_damage', guess: true },
+	{ name: 'hemorrhage', type: 'life_damage' },        // ADD_STATE insoignable : état qui touche la vie, comme divine_protection (invincible) est classée protection
 
 	{ name: 'helmet', type: 'shield' },
 	{ name: 'wall', type: 'shield' },
@@ -115,6 +115,7 @@ const CHIPS = [
 	{ name: 'knowledge', type: 'boost' },
 	{ name: 'wizardry', type: 'boost' },
 	{ name: 'prism', type: 'boost', guess: true },
+	{ name: 'maturation', type: 'boost' },            // v2.50 : mûrit une invocation alliée (+vie max, +puissance)
 
 	{ name: 'puny_bulb', type: 'summon' },
 	{ name: 'rocky_bulb', type: 'summon' },
@@ -128,6 +129,7 @@ const CHIPS = [
 	{ name: 'savant_bulb', type: 'summon' },
 	{ name: 'corn', type: 'summon' },
 	{ name: 'chilli_pepper', type: 'summon' },
+	{ name: 'prototaxites', type: 'summon' },         // v2.50 : ex-« Cactus », invocation obstacle enracinée
 
 	{ name: 'thorn', type: 'damage_return' },
 	{ name: 'mirror', type: 'damage_return' },
@@ -149,6 +151,7 @@ const CHIPS = [
 	{ name: 'covid', type: 'poison' },
 	{ name: 'arsenic', type: 'poison' },
 	{ name: 'corruption', type: 'poison', guess: true },
+	{ name: 'superinfection', type: 'poison' },       // v2.50 : convertit les poisons de la cible en dégâts immédiats
 
 	{ name: 'alteration', type: 'nova' },
 	{ name: 'mutation', type: 'nova' },
@@ -264,9 +267,10 @@ const NOT_CHIPS = ['shuriken_star']
 // Puces déclarées ici mais PAS SORTIES dans le jeu : elles n'ont aucune image
 // dans client/public/image/chip/. Ne jamais les exporter — les deux dépôts
 // (meta et le client) sont PUBLICS, et publier leur image révélerait du contenu
-// non annoncé. `corn` et `chilli_pepper` sont `public => false` au registry,
-// `corruption` en est absente. Un export en lot les recrée sans prévenir.
-const UNRELEASED = ['corn', 'chilli_pepper', 'corruption']
+// non annoncé. `corruption` est absente du registry. Un export en lot recrée
+// ces images sans prévenir. `corn`, `chilli_pepper`, `hemorrhage`, `maturation`,
+// `superinfection` et `prototaxites` sortent en 2.50 et ont été retirées d'ici.
+const UNRELEASED = ['corruption']
 
 const PATHS = {
 	chipIcons: '/meta/image/chip/png/',

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Prototaxite : haute colonne fongique fuselée, base évasée, deux colonnes sœurs.
+       Tout en chemins REMPLIS (le rendu MSVG d'ImageMagick ignore les strokes). -->
+  <g fill="black">
+    <!-- colonne principale -->
+    <path d="M 168 492 C 196 482 206 456 208 422 L 210 130 C 210 82 227 48 250 48 C 273 48 290 82 290 130 L 292 422 C 294 456 304 482 332 492 Z"/>
+    <!-- colonne soeur gauche -->
+    <path d="M 60 492 C 78 485 87 466 88 442 L 90 268 C 90 238 98 220 110 220 C 122 220 130 238 130 268 L 132 442 C 133 466 137 485 155 492 Z"/>
+    <!-- colonne soeur droite -->
+    <path d="M 348 492 C 366 486 374 470 375 448 L 377 326 C 377 298 383 282 393 282 C 403 282 409 298 409 326 L 411 448 C 412 470 420 486 438 492 Z"/>
+  </g>
+  <g fill="white">
+    <!-- anneaux horizontaux de la colonne principale (bandes bombées vers le bas) -->
+    <path d="M 222 132 Q 250 146 278 132 L 278 146 Q 250 160 222 146 Z"/>
+    <path d="M 221 210 Q 250 224 279 210 L 279 224 Q 250 238 221 224 Z"/>
+    <path d="M 220 288 Q 250 302 280 288 L 280 302 Q 250 316 220 302 Z"/>
+    <path d="M 219 366 Q 250 380 281 366 L 281 380 Q 250 394 219 380 Z"/>
+    <!-- anneaux des colonnes soeurs -->
+    <path d="M 99 290 Q 110 300 121 290 L 121 302 Q 110 312 99 302 Z"/>
+    <path d="M 98 362 Q 110 372 122 362 L 122 374 Q 110 384 98 374 Z"/>
+    <path d="M 384 348 Q 393 357 402 348 L 402 359 Q 393 368 384 359 Z"/>
+    <path d="M 385 412 Q 393 420 401 412 L 401 423 Q 393 431 385 423 Z"/>
+    <!-- reflet du sommet, comme les éclats blancs des autres glyphes -->
+    <path d="M 228 70 C 232 62 240 60 242 66 C 244 72 238 92 234 100 C 230 108 222 108 221 101 C 220 92 224 78 228 70 Z"/>
+  </g>
+</svg>
