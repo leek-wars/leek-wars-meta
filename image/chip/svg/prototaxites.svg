@@ -1,26 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <!-- Prototaxite : haute colonne fongique fuselée, base évasée, deux colonnes sœurs.
+  <!-- Prototaxite, silhouette paléoart : haut tronc massif effilé (obélisque
+       organique / termitière allongée), base évasée, amincissement continu vers
+       une pointe douce, cannelures verticales / plis drapés découpés en blanc.
+       Deux colonnes sœurs aux mêmes pointes.
        Tout en chemins REMPLIS (le rendu MSVG d'ImageMagick ignore les strokes). -->
   <g fill="black">
-    <!-- colonne principale -->
-    <path d="M 168 492 C 196 482 206 456 208 422 L 210 130 C 210 82 227 48 250 48 C 273 48 290 82 290 130 L 292 422 C 294 456 304 482 332 492 Z"/>
+    <!-- tronc principal -->
+    <path d="M 150 492 C 186 484 196 462 199 424 C 204 345 211 230 224 132 C 229 88 239 48 250 38 C 261 48 271 88 276 132 C 289 230 296 345 301 424 C 304 462 314 484 350 492 Z"/>
     <!-- colonne soeur gauche -->
-    <path d="M 60 492 C 78 485 87 466 88 442 L 90 268 C 90 238 98 220 110 220 C 122 220 130 238 130 268 L 132 442 C 133 466 137 485 155 492 Z"/>
+    <path d="M 44 492 C 66 486 74 468 77 438 C 80 398 84 340 90 296 C 93 262 97 240 101 236 C 105 240 109 262 112 296 C 118 340 122 398 125 438 C 128 468 136 486 158 492 Z"/>
     <!-- colonne soeur droite -->
-    <path d="M 348 492 C 366 486 374 470 375 448 L 377 326 C 377 298 383 282 393 282 C 403 282 409 298 409 326 L 411 448 C 412 470 420 486 438 492 Z"/>
+    <path d="M 350 492 C 368 488 375 472 377 448 C 380 415 383 365 388 330 C 390 308 395 292 399 289 C 403 292 408 308 410 330 C 415 365 418 415 421 448 C 423 472 430 488 447 492 Z"/>
   </g>
   <g fill="white">
-    <!-- anneaux horizontaux de la colonne principale (bandes bombées vers le bas) -->
-    <path d="M 222 132 Q 250 146 278 132 L 278 146 Q 250 160 222 146 Z"/>
-    <path d="M 221 210 Q 250 224 279 210 L 279 224 Q 250 238 221 224 Z"/>
-    <path d="M 220 288 Q 250 302 280 288 L 280 302 Q 250 316 220 302 Z"/>
-    <path d="M 219 366 Q 250 380 281 366 L 281 380 Q 250 394 219 380 Z"/>
-    <!-- anneaux des colonnes soeurs -->
-    <path d="M 99 290 Q 110 300 121 290 L 121 302 Q 110 312 99 302 Z"/>
-    <path d="M 98 362 Q 110 372 122 362 L 122 374 Q 110 384 98 374 Z"/>
-    <path d="M 384 348 Q 393 357 402 348 L 402 359 Q 393 368 384 359 Z"/>
-    <path d="M 385 412 Q 393 420 401 412 L 401 423 Q 393 431 385 423 Z"/>
-    <!-- reflet du sommet, comme les éclats blancs des autres glyphes -->
-    <path d="M 228 70 C 232 62 240 60 242 66 C 244 72 238 92 234 100 C 230 108 222 108 221 101 C 220 92 224 78 228 70 Z"/>
+    <!-- cannelures verticales du tronc (plis drapés) -->
+    <path d="M 240 115 C 233 220 228 340 226 452 C 230 457 237 457 240 452 C 242 340 248 220 253 122 C 249 112 243 109 240 115 Z"/>
+    <path d="M 263 210 C 266 290 269 390 271 452 C 268 457 261 457 258 452 C 257 390 256 290 254 216 C 256 207 261 203 263 210 Z"/>
+    <!-- cannelures des colonnes soeurs -->
+    <path d="M 97 298 C 95 355 92 415 91 453 C 94 459 102 459 105 453 C 105 415 106 355 108 304 C 105 295 99 292 97 298 Z"/>
+    <path d="M 400 334 C 401 377 403 420 404 450 C 401 456 393 456 392 450 C 391 420 390 377 389 338 C 390 330 397 328 400 334 Z"/>
   </g>
 </svg>
