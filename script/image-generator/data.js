@@ -152,6 +152,11 @@ const CHIPS = [
 	{ name: 'arsenic', type: 'poison' },
 	{ name: 'corruption', type: 'poison', guess: true },
 	{ name: 'superinfection', type: 'poison' },       // v2.50 : convertit les poisons de la cible en dégâts immédiats
+	// v2.50 — puces des plantes (Éveil) : Piment = piquant / capsaicin, Maïs = sugar / popcorn
+	{ name: 'piquant', type: 'attack' },
+	{ name: 'capsaicin', type: 'attack' },
+	{ name: 'sugar', type: 'heal' },
+	{ name: 'popcorn', type: 'heal' },
 
 	{ name: 'alteration', type: 'nova' },
 	{ name: 'mutation', type: 'nova' },
