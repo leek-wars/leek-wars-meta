@@ -250,6 +250,7 @@ const POMPS = [
 	{ name: 'ai_lines', black: true },
 	{ name: 'leek_title', black: true },
 	{ name: 'farmer_title', black: true },
+	{ name: 'golden_title', black: true },
 	{ name: 'metal', black: true },
 	// `scale` : les visages sont détourés au plus juste dans leur SVG, sans la
 	// marge que gardent les autres apparats — sans correction ils débordent.
