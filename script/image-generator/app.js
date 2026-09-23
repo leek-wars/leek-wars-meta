@@ -19,10 +19,15 @@ const PRESETS = {
 	// Ne PAS activer `outlineOn` ici : le cerne noir est obtenu par dilatation
 	// du masque et avale les détails fins (points du bandage, jugulaire du
 	// casque) à 100 px.
-	classique: { radius: 0, bgTint: 0, bgGradient: 0, borderWidth: 5, borderAlpha: 100, borderBlack: false, glyphScale: 70, shadowOn: false, shadowOffset: 4, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 25, bgOn: true,
+	// borderWidth, glyphScale, blackFrame et cornerCut retrouvés en septembre 2026 en
+	// ajustant le rendu sur les tuiles RÉELLEMENT livrées (liberation, punishment,
+	// manumission : écart moyen < 1/255 par canal) : les réglages validés d'août
+	// vivaient dans le navigateur de Pierre, le préréglage du dépôt en avait dérivé et
+	// regénérait des tuiles au glyphe trop petit et sans coins coupés.
+	classique: { radius: 0, bgTint: 0, bgGradient: 0, borderWidth: 3.5, borderAlpha: 100, borderBlack: false, glyphScale: 77, shadowOn: false, shadowOffset: 4, shadowAlpha: 45, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 25, bgOn: true,
 		glow: 0, shine: 0, vignette: 50, rimLight: 0, innerLine: false,
 		reliefOn: false, bevel: 31, relief: 55, specular: 45,
-		classicOn: true, haloWidth: 5, bgPale: 90, customHalo: true, blackFrame: 2, cropToContent: true, cornerCut: 0, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6, ...GLYPH_OFF },
+		classicOn: true, haloWidth: 5, bgPale: 90, customHalo: true, blackFrame: 1.5, cropToContent: true, cornerCut: 12, cutBothCorners: true, pompCutInverted: true, pompGlyphScale: 65, pompBorderWidth: 6, ...GLYPH_OFF },
 	relief: { radius: 2, bgTint: 16, bgGradient: 10, borderWidth: 3.5, borderAlpha: 100, borderBlack: true, glyphScale: 76, shadowOn: true, shadowOffset: 2.5, shadowAlpha: 35, strip: false, cornerBadge: false, outlineOn: true, outlineWidth: 2, duotone: 30, bgOn: true,
 		glow: 28, shine: 8, vignette: 18, rimLight: 0, innerLine: false,
 		reliefOn: true, bevel: 22, relief: 55, specular: 45 , ...CLASSIC_OFF, ...GLYPH_OFF },
@@ -40,7 +45,9 @@ const PRESETS = {
 	immersif: { radius: 4, bgTint: 24, bgGradient: 10, borderWidth: 0,  borderAlpha: 0,  borderBlack: false, glyphScale: 72, shadowOn: true,  shadowOffset: 3.5, shadowAlpha: 55, strip: false, cornerBadge: false, outlineOn: false, outlineWidth: 3, duotone: 0, bgOn: true, ...ART_OFF, ...RELIEF_OFF, ...CLASSIC_OFF, ...GLYPH_OFF },
 }
 
-const CONFIG_VERSION = 6
+// 7 : préréglage `classique` recalé sur les tuiles livrées — les configs enregistrées
+// portent les anciens réglages dérivés et doivent repartir des valeurs par défaut.
+const CONFIG_VERSION = 7
 
 const state = {
 	params: { ...PRESETS.classique },

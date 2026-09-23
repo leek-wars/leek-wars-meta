@@ -64,7 +64,6 @@ const CHIPS = [
 	{ name: 'apocalypse', type: 'attack' },
 
 	{ name: 'punishment', type: 'life_damage' },
-	{ name: 'hemorrhage', type: 'life_damage' },        // ADD_STATE insoignable : état qui touche la vie, comme divine_protection (invincible) est classée protection
 
 	{ name: 'helmet', type: 'shield' },
 	{ name: 'wall', type: 'shield' },
@@ -165,6 +164,9 @@ const CHIPS = [
 	{ name: 'density', type: 'nova', guess: true },
 
 	{ name: 'liberation', type: 'other' },
+	// v2.50 : ADD_STATE insoignable. Une puce d'état, pas une puce de dégâts — tuile
+	// grise des tactiques, halo rouge du sang (comme la Libération, autre pose d'état).
+	{ name: 'hemorrhage', type: 'other' },
 	{ name: 'teleportation', type: 'other' },
 	{ name: 'inversion', type: 'other' },
 	{ name: 'antidote', type: 'other' },
@@ -234,6 +236,7 @@ const CUSTOM_HALO = {
 	grapple: STAT_COLORS.tactic,
 	boxing_glove: STAT_COLORS.tactic,
 	liberation: STAT_COLORS.free,
+	hemorrhage: STAT_COLORS.free,
 	manumission: STAT_COLORS.shackle,
 	// Un tableau = halo arc-en-ciel CONIQUE, qui tourne autour du glyphe en
 	// partant du haut. Le prisme décompose la lumière : spectre complet, dans
